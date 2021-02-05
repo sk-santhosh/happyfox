@@ -38,14 +38,34 @@ export default class TopBar extends Component {
           </span>
         </div>
 
-        <div>
-          <input type="text" />
-        </div>
-
-        <div className="flex">
-          <span>
+        <div className="flex text-white">
+          <div class="relative mx-auto h-full">
+            <button type="submit" class="absolute left-0 top-0 mt-4 ml-3">
+              <svg
+                className="h-5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <input
+              class=" bg-gray-600 h-10 my-1 px-5 pl-10 w-96 rounded text-sm focus:outline-none"
+              type="search"
+              name="search"
+              placeholder="Search"
+            />
+          </div>
+          <button className="p-2 my-auto ml-1 rounded outline-none focus:outline-none bg-gray-600">
             <svg
-              className="h-5 mr-3"
+              className="h-5"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -55,10 +75,32 @@ export default class TopBar extends Component {
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M19 9l-7 7-7-7"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
               />
             </svg>
-          </span>
+          </button>
+        </div>
+
+        <div className="flex items-center">
+          <div className="flex items-center">
+            <img src="/user.png" alt="user" className="w-6 rounded-full" />
+            <span>
+              <svg
+                className="h-5 mr-3"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </div>
           <span>
             <svg
               className="h-5"

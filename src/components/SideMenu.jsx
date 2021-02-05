@@ -14,7 +14,10 @@ export default class SideMenu extends Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{ width: "260px" }}
+        className="w-auto fixed h-full bg-gray-500 text-sm text-white"
+      >
         <div className="pt-5 pl-7 pr-5 pb-4 flex justify-between">
           <div className="flex">
             <span className="uppercase font-bold mr-1">queues</span>

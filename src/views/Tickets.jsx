@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SideMenu from "../components/SideMenu";
+import Tickets from "../components/Tickets";
 import TopBar from "../components/TopBar";
 
 export default class Dashboard extends Component {
@@ -9,8 +10,16 @@ export default class Dashboard extends Component {
         <div className="fixed h-12 bg-gray-800 w-full z-10 text-white">
           <TopBar />
         </div>
-        <div className="w-64 mt-12 min-h-screen fixed text-white bg-gray-600 text-sm">
-          <SideMenu />
+        <div
+          className="pt-12 grid"
+          style={{ gridTemplateColumns: "260px 1fr" }}
+        >
+          <div>
+            <SideMenu />
+          </div>
+          <div className="w-full">
+            <Tickets />
+          </div>
         </div>
       </div>
     );
