@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import Ticket from "./Ticket";
 
-export default class Tickets extends Component {
+class Tickets extends Component {
   render() {
+    const { tickets } = this.props;
     return (
       <div className="m-2">
         <div className="my-5 ml-10 mr-5 flex justify-between">
@@ -17,9 +19,9 @@ export default class Tickets extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
                 />
               </svg>
@@ -32,9 +34,9 @@ export default class Tickets extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
@@ -48,9 +50,9 @@ export default class Tickets extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
                 />
               </svg>
@@ -63,9 +65,9 @@ export default class Tickets extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
@@ -80,9 +82,9 @@ export default class Tickets extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
@@ -97,9 +99,9 @@ export default class Tickets extends Component {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
@@ -113,9 +115,9 @@ export default class Tickets extends Component {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
@@ -124,13 +126,19 @@ export default class Tickets extends Component {
           </div>
         </div>
         <div className="mr-4">
-          <Ticket />
-          <Ticket />
-          <Ticket />
-          <Ticket />
-          <Ticket />
+          {tickets.map((ticket, key) => (
+            <Ticket key={key} ticket={ticket} />
+          ))}
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = ({ ticketsReducer }) => {
+  return {
+    tickets: ticketsReducer.tickets,
+  };
+};
+
+export default connect(mapStateToProps)(Tickets);

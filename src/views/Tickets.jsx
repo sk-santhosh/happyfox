@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SideMenu from "../components/SideMenu";
 import Tickets from "../components/Tickets";
+import TicketView from "../components/TicketView";
 import TopBar from "../components/TopBar";
 
 export default class Dashboard extends Component {
@@ -17,8 +18,9 @@ export default class Dashboard extends Component {
           <div>
             <SideMenu />
           </div>
-          <div className="w-full">
+          <div className="w-full relative">
             <Tickets />
+            <TicketView />
           </div>
         </div>
       </div>

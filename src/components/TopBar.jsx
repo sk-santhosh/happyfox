@@ -13,9 +13,9 @@ export default class TopBar extends Component {
               fill="currentColor"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </span>
@@ -29,9 +29,9 @@ export default class TopBar extends Component {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M19 9l-7 7-7-7"
               />
             </svg>
@@ -39,8 +39,8 @@ export default class TopBar extends Component {
         </div>
 
         <div className="flex text-white">
-          <div class="relative mx-auto h-full">
-            <button type="submit" class="absolute left-0 top-0 mt-4 ml-3">
+          <div className="relative mx-auto h-full">
+            <button type="submit" className="absolute left-0 top-0 mt-4 ml-3">
               <svg
                 className="h-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,15 +49,15 @@ export default class TopBar extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
             </button>
             <input
-              class=" bg-gray-600 h-10 my-1 px-5 pl-10 w-96 rounded text-sm focus:outline-none"
+              className=" bg-gray-600 h-10 my-1 px-5 pl-10 w-96 rounded text-sm focus:outline-none"
               type="search"
               name="search"
               placeholder="Search"
@@ -72,9 +72,9 @@ export default class TopBar extends Component {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M12 6v6m0 0v6m0-6h6m-6 0H6"
               />
             </svg>
@@ -93,9 +93,9 @@ export default class TopBar extends Component {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
@@ -110,9 +110,9 @@ export default class TopBar extends Component {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
               />
             </svg>
