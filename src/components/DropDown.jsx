@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 export default class DropDown extends Component {
-  state = { open: false, user: 0 };
+  state = { open: false, value: this.props.value };
 
   render() {
-    const { list } = this.props;
+    const { list, value } = this.props;
     return (
       <div className="relative  w-1/5">
         <div
@@ -15,10 +15,10 @@ export default class DropDown extends Component {
             <span className="text-xs">{this.props.type}</span>
             <span
               className={`text-md font-bold text-${
-                list[this.state.user].color
+                list[this.state.value].color
               }`}
             >
-              {list[this.state.user].name}
+              {list[this.state.value].name}
             </span>
           </div>
         </div>

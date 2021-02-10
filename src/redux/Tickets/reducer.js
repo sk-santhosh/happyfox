@@ -1,8 +1,16 @@
-import { GET_TICKETS, GET_TICKET, CLEAR_TICKET_VIEW } from "./types";
+import {
+  GET_TICKETS,
+  GET_TICKET,
+  CLEAR_TICKET_VIEW,
+  FETCH_TICKETS,
+} from "./types";
 import { tickets } from "../initialState";
 
 export const ticketsReducer = (state = tickets, action) => {
   switch (action.type) {
+    case FETCH_TICKETS:
+      return { ...state, tickets: action.tickets };
+
     case GET_TICKETS:
       return state;
 

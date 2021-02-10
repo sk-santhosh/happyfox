@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { config } from "../assets/config";
 import { viewTicket, closeTicket } from "../redux/Tickets/actions";
 import DropDown from "./DropDown";
 import Star from "./Star";
@@ -34,9 +35,12 @@ class Ticket extends Component {
               </svg>
             </span>
             <div className="w-36 flex flex-col mr-3 my-auto text-center">
-              <span className="text-xs">#SLIP000000002</span>
-              <span className="py-1 bg-yellow-600 text-white my-1 rounded-r-sm text-sm">
-                OPEN
+              <span className="text-xs">{ticket.id}</span>
+              <span
+                className="py-1 bg-gray-600 text-white my-1 rounded-r-sm text-sm uppercase"
+                style={{ backgroundColor: config.status[ticket.status].color }}
+              >
+                {config.status[ticket.status].name}
               </span>
             </div>
             <div className="p-2 my-auto">
@@ -70,8 +74,9 @@ class Ticket extends Component {
               </span>
             </div>
             <UserDropDown type="assignee" user={ticket.assignee} />
-            <UserDropDown type="raised by" user={ticket.raised_by} />
+            <UserDropDown type="raised by" user={ticket.raised} />
             <DropDown
+              value={ticket.priority}
               type="priority"
               list={[
                 { name: "Low", color: "green-600" },
@@ -81,6 +86,7 @@ class Ticket extends Component {
               ]}
             />
             <DropDown
+              value={ticket.category}
               type="category"
               list={[
                 { name: "Billing & Return", color: "black" },

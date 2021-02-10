@@ -1,4 +1,9 @@
-import { GET_TICKETS, GET_TICKET, CLEAR_TICKET_VIEW } from "./types";
+import {
+  GET_TICKETS,
+  GET_TICKET,
+  CLEAR_TICKET_VIEW,
+  FETCH_TICKETS,
+} from "./types";
 
 export const getTickets = () => {
   return {
@@ -16,5 +21,12 @@ export const viewTicket = (id) => {
   return {
     type: GET_TICKET,
     id: id,
+  };
+};
+
+export const fetchTickets = (tickets) => {
+  return {
+    type: FETCH_TICKETS,
+    tickets: tickets,
   };
 };

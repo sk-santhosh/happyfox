@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import TicketsComponent from "../components/Tickets";
+import KanboardComponent from "../components/Kanboard/Kanboard";
 import TicketView from "../components/TicketView";
 import { fetchTickets } from "../redux/Tickets/actions";
 
-class Tickets extends Component {
+class Kanboard extends Component {
   async componentDidMount() {
     let tickets = await axios.get("/dummy.json");
     this.props.fetchTickets(tickets.data.tickets);
@@ -14,7 +14,7 @@ class Tickets extends Component {
   render() {
     return (
       <div>
-        <TicketsComponent />
+        <KanboardComponent />
         <TicketView />
       </div>
     );
@@ -27,4 +27,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Tickets);
+export default connect(null, mapDispatchToProps)(Kanboard);
