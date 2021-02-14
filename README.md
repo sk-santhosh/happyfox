@@ -1,3 +1,4 @@
 # Demo
 
-<a to="https://sk-santhosh-happyfox-0001.netlify.app/">Demo</a>
+[Demo](https://sk-santhosh-happyfox-0001.netlify.app/ "Demo")
+
